@@ -48,3 +48,17 @@ trusty
 trusty
 ```
 
+Final Puppet Install Instructions
+---------------------------------
+
+After all this we get:
+
+```
+sudo wget -O /usr/local/bin/mint_or_ubuntu_lsb.sh https://raw.githubusercontent.com/thegillis/mint_or_ubuntu_lsb/master/mint_or_ubuntu_lsb.sh
+sudo chmod a+x /usr/local/bin/mint_or_ubuntu_lsb.sh
+wget http://apt.puppetlabs.com/puppetlabs-release-`/usr/local/bin/mint_or_ubuntu_lsb.sh`.deb
+sudo dpkg -i puppetlabs-release-`/usr/local/bin/mint_or_ubuntu_lsb.sh`.deb
+sudo apt-get update
+sudo apt-get install puppet
+```
+
